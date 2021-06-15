@@ -9,6 +9,7 @@ from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
+import cairosvg
 
 
 TOP_TEXT_FORMAT = 'Diplomet tildeles {} i Gamle Oslo String Orchestra'
@@ -100,16 +101,23 @@ def main():
         bottom_text_el = diploma.find_id('BOTTOM_TEXT').root
         bottom_text_el.text = BOTTOM_TEXT
 
+        # SVG
         basename = member.name().replace(' ', '_')
         orchestra = member.orchestra()
         filename_base = './member-{}-{}'.format(basename, orchestra.lower())
         svg_filename = filename_base + '.svg'
         diploma.save(svg_filename)
+
+        # PDF
         report_lab_graphic = svg2rlg(svg_filename)
         pdfmetrics.registerFont(TTFont('Coustard', './fonts/Coustard-Regular.ttf'))
         pdfmetrics.registerFont(TTFont('Glacial Indifference', './fonts/GlacialIndifference-Regular.ttf'))
         pdf_filename = filename_base + '.pdf'
         renderPDF.drawToFile(report_lab_graphic, pdf_filename)
+
+        # PNG
+        png_filename = filename_base + '.png'
+        cairosvg.svg2png(url=svg_filename, write_to=png_filename, scale=4.0)
 
 
 if __name__ == '__main__':
