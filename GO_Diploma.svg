@@ -8,13 +8,11 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Body">
-            <rect id="Rectangle" fill="#FFFFF7" x="0" y="0" width="798" height="618"/>
+            <rect id="Rectangle" fill="#FFFFF0" x="0" y="0" width="798" height="618"/>
             <g id="Borders" transform="translate(27.000000, 34.000000)" stroke="#114851" stroke-width="3">
-                <rect id="Outer" x="0" y="12" width="742" height="528">
-                </rect>
+                <rect id="Outer" x="0" y="12" width="742" height="528"/>
                 <rect id="Middle" x="11.480469" y="23.828125" width="719" height="505"/>
-                <rect id="Inner" x="21.5" y="1.5" width="697" height="548">
-                </rect>
+                <rect id="Inner" x="21.5" y="1.5" width="697" height="548"/>
             </g>
             <text id="DIPLOMA" x="50%" y="127" text-anchor="middle" font-family="Coustard-Regular, Coustard" font-size="36" letter-spacing="0.9" fill="#114851">
                 DIPLOM
@@ -39,7 +37,8 @@
             </g>
             <svg id="Dirigent" x="187" y="453" width="171" text-anchor="middle">
                 <line id="Left-Signature-Line" x1="0.5" y1="0.5" x2="171.5" y2="0.5" stroke="#114851" stroke-width="3" stroke-linecap="square"/>
-                <text id="CONDUCTOR_NAME" x="50%" y="27" font-family="Coustard-Regular, Coustard" font-size="16" fill="#AB5A2F">Mira Aas
+                <text id="CONDUCTOR_NAME" x="50%" y="27" font-family="Coustard-Regular, Coustard" font-size="16" fill="#AB5A2F">
+                    Mira Aas
                 </text>
                 <text id="DIRIGENT" x="50%" y="51" font-family="GlacialIndifference-Regular, Glacial Indifference" font-size="12" fill="#AB5A2F">
                     DIRIGENT
